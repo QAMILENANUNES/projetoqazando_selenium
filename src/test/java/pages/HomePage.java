@@ -4,14 +4,16 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import suport.Utils;
 
-public class HomePage {
+public class HomePage extends Utils {
     WebDriver driver;
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
     public void acessarAplicacao(){
         driver.get("http://www.qazando.com.br/curso.html");
+        esperarElementoEstarPresente(By.id("btn-ver-cursos"),10);
         Assert.assertEquals("não acessou aplicação",true,driver.findElement(By.id("btn-ver-cursos")).isDisplayed());
     }
     public void scroolDown()throws InterruptedException{

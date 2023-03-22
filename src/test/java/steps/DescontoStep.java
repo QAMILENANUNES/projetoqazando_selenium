@@ -5,8 +5,11 @@ import cucumber.api.java.pt.Quando;
 import pages.HomePage;
 import runner.RunCucumberTest;
 
+;
+
 
 public class DescontoStep extends RunCucumberTest {
+
     HomePage homePage= new HomePage(driver);
     //variavel          //instância de memória
     @Dado("^que estou no site da qazando$")
